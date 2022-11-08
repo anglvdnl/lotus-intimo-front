@@ -1,0 +1,142 @@
+.Wrapper {
+    display: flex;
+    justify-content: space-around;
+    .Info{
+        -webkit-box-shadow: 0px 0px 15px -8px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 0px 0px 15px -8px rgba(66, 68, 90, 1);
+        box-shadow: 0px 0px 15px -8px rgba(66, 68, 90, 1);
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .Contacts {
+        margin: 20px 0;
+
+        div {
+            display: flex;
+            margin: 5px;
+        }
+    }
+
+    .Delivery {
+        margin: 20px 0;
+
+        div {
+            color: black;
+        }
+
+        .Selects {
+            margin: 10px;
+
+            .Select {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .Payment {
+        margin: 20px 0;
+
+        div {
+            color: black;
+        }
+
+        .Select {
+            margin: 10px;
+
+            p {
+                color: rgb(79, 79, 79);
+                font-size: 14px;
+                word-wrap: break-word;
+            }
+        }
+    }
+
+    .CartItems {
+        h3{
+            float: right;
+        }
+        .Item {
+            -webkit-box-shadow: 0px 0px 15px -8px rgba(66, 68, 90, 1);
+            -moz-box-shadow: 0px 0px 15px -8px rgba(66, 68, 90, 1);
+            box-shadow: 0px 0px 15px -8px rgba(66, 68, 90, 1);
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+
+            img {
+                box-sizing: content-box;
+                padding: 20px;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+            .ItemInfo {
+                margin-left: 30px;
+                padding: 10px;
+
+                h2 {
+                    margin: 0 0 5px 0;
+                }
+
+                span {
+                    display: flex;
+
+                    p {
+                        margin-right: 20px;
+                    }
+                }
+
+                p {
+                    font-weight: 500;
+                }
+            }
+
+            h3 {
+                padding: 20px;
+            }
+        }
+    }
+
+    button {
+        border: 1px solid #750d37;
+        border-radius: 9px;
+        background-color: #750d37;
+        outline: none;
+        color: #fff;
+        padding: 15px 20px;
+        display: flex;
+        margin: 0 auto;
+        font-size: medium;
+    }
+
+    .Valid{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .Wrapper{
+        flex-flow: column;
+        align-items: center;
+
+        .CartItems{
+            .Item{
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Wrapper{
+
+        .Info{
+            width: fit-content;
+        }
+
+        .CartItems{
+            display: none;
+        }
+    }
+}

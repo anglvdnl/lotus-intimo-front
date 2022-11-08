@@ -1,0 +1,61 @@
+.ItemModal {
+    .Container {
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        margin: 5px;
+        overflow: hidden;
+        color: #ffffff;
+
+        .Close {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            transition: all 0.2s;
+
+            svg {
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+
+            &:hover {
+                svg {
+                    color: #6a6a6a;
+                }
+            }
+
+            &:active {
+                transform: scale(1.1);
+            }
+        }
+
+        input {
+            padding: 10px 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .Form {
+            text-align: center;
+            
+            h2 {
+                text-align: center;
+                color: black;
+            }
+
+            .EditButton {
+                text-align: center;
+                background-color: rgb(180, 123, 249);
+                border: none;
+                outline: none;
+                padding: 15px 30px;
+                border-radius: 10px;
+                color: #fff;
+            }
+        }
+    }
+}

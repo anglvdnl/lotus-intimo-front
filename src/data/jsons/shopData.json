@@ -1,0 +1,49 @@
+{
+    "items": [
+      {
+        "id": 11,
+        "name": "Google Glasses",
+        "price": 12700.0
+      },
+      {
+        "id": 22,
+        "name": "Jessy Pants",
+        "price": 300.0
+      },
+      {
+        "id": 33,
+        "name": "Apple Juice",
+        "price": 30.0
+      },
+      {
+        "id": 144,
+        "name": "Monna Lisa",
+        "price": 12399.0
+      },
+      {
+        "id": 145,
+        "name": "Kek 4eburek",
+        "price": 750.5
+      },
+      {
+        "id": 146,
+        "name": "Neubivaka",
+        "price": 200.15
+      },
+      {
+        "id": 147,
+        "name": "Yotako Sanji",
+        "price": 1150.5
+      },
+      {
+        "id": 148,
+        "name": "PlayStation 5",
+        "price": 27630.0
+      },
+      {
+        "id": 149,
+        "name": "Ліфчик Великий",
+        "price": 120.0
+      }
+    ]
+  }

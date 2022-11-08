@@ -1,0 +1,15 @@
+export const filterTypes = {
+    color: "color",
+    size: "size",
+    brand: "brand",
+    minPrice: "minPrice",
+    maxPrice: "maxPrice",
+    novelty: "novelty",
+    heat: "heat",
+    discount: "discount",
+    search: "search",
+    womanCategory: "category_0",
+    manCategory: "category_1",
+    kidsCategory: "category_2",
+    certifsCategory: "category_3",
+};

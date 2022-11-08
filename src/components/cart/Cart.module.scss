@@ -1,0 +1,288 @@
+.CartWrapper {
+    a {
+        text-decoration: none;
+    }
+    h1 {
+        text-align: center;
+    }
+
+    .Empty {
+        text-align: center;
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        p {
+            a {
+                font-weight: bold;
+                color: black;
+            }
+        }
+    }
+
+    .CartBody {
+        display: flex;
+    }
+
+    aside {
+        background-color: #b6827c;
+        width: 20vw;
+        height: 200px;
+        margin: 0 auto;
+        color: #fff;
+        border-radius: 15px;
+
+        p {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 60px auto;
+            background-color: transparent;
+            color: #fff;
+            padding: 15px 20px;
+            border: 2px solid #750d37;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: all 0.2s;
+
+            &:hover {
+                background-color: #750d37;
+            }
+        }
+    }
+
+    .CartItem {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 0 0 20px 40px;
+        width: 70vw;
+        -webkit-box-shadow: 0px 0px 15px -8px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 0px 0px 15px -8px rgba(66, 68, 90, 1);
+        box-shadow: 0px 0px 15px -8px rgba(66, 68, 90, 1);
+
+        .Wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            height: 120px;
+            width: 120px;
+            object-fit: cover;
+        }
+
+        .Content {
+            display: flex;
+            flex-flow: column;
+            padding: 20px;
+
+            h3 {
+                margin: 10px 0;
+            }
+
+            .Params {
+                display: flex;
+                align-items: center;
+
+                .DropDowns {
+                    display: flex;
+
+                    .DropDownItem {
+                        margin-right: 20px;
+                    }
+                }
+
+                .PriceWrapper {
+                    display: flex;
+                    align-items: center;
+                    height: 70px;
+                    background-color: #001427;
+                    border-radius: 5px;
+
+                    .Counter {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 70px;
+                        height: 100%;
+                        color: #fff;
+                        margin: 10px;
+
+                        button {
+                            padding: 0;
+                            font-size: 30px;
+                            border: 0;
+                            outline: 0;
+                            background-color: transparent;
+                            color: #fff;
+                        }
+
+                        p {
+                            margin: 0;
+                        }
+                    }
+
+                    .Price {
+                        color: #fff;
+                        margin: 10px;
+                    }
+
+                    .PriceX {
+                        color: #fff;
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+        .Total {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        svg {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 30px;
+        }
+    }
+
+    .Total {
+        margin-top: 20px;
+    }
+}
+
+.BuyModal {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 400px;
+    height: 500px;
+    background: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+    .CartWrapper {
+        aside {
+            width: 25vw;
+        }
+
+        .CartItem {
+            width: 65vw;
+
+            .Content {
+                .Params {
+                    flex-flow: column;
+                    align-items: flex-start;
+
+                    .PriceWrapper {
+                        margin-top: 20px;
+                    }
+                }
+            }
+            .Total {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .CartWrapper {
+        .CartBody {
+            display: block;
+        }
+
+        aside {
+            width: 100vw;
+            position: fixed;
+            top: 100%;
+            transform: translateY(-100%);
+            border-radius: 0px;
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            button {
+                margin: 0;
+            }
+        }
+
+        .CartItem {
+            width: auto;
+            margin-right: 40px;
+
+            .Content {
+                .Params {
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .CartWrapper {
+        .CartItem {
+            padding: 0;
+            img {
+                display: none;
+            }
+            .Content {
+                align-items: center;
+
+                .Params {
+                    align-items: center;
+
+                    .DropDowns {
+                        display: block;
+
+                        .DropDownItem {
+                            margin: 0;
+                            margin-top: 10px;
+                        }
+                    }
+
+                    .PriceWrapper {
+                        margin-top: 10px;
+                        height: 50px;
+
+                        .Counter {
+                            p {
+                                font-size: 20px;
+                            }
+                            button {
+                                font-size: 35px;
+                            }
+                        }
+
+                        .Price {
+                            font-size: 20px;
+                        }
+
+                        .PriceX {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+
+            .Total {
+                padding: 10px;
+                margin: 0;
+                font-size: 16px;
+            }
+        }
+    }
+}

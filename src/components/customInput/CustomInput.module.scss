@@ -1,0 +1,96 @@
+.InputWrapper {
+    position: relative;
+
+  .Required {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        text-align: center;
+        background-color: #efdace;
+        right: -2px;
+        top: -4px;
+    }
+
+  .Valid{
+      position: absolute;
+      top: 50%;
+      right: 6px;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+
+      svg{
+        color: #204d20;
+      }
+    }
+
+  .Invalid{
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    svg{
+      color: #411515;
+    }
+  }
+
+    label {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #000;
+        left: 5px;
+        padding: 0 5px;
+        transition: line-height 200ms ease-in-out, font-size 200ms ease-in-out, top 200ms ease-in-out;
+        pointer-events: none;
+    }
+    .RequiredInput {
+        &:focus {
+            outline: none;
+            border: 1px solid #b20909;
+            + label {
+                color: #b20909;
+            }
+        }
+    }
+    input {
+        background-color: transparent;
+        width: 200px;
+        height: 30px;
+        border: 1px solid #757575;
+        border-radius: 3px;
+        padding: 0 10px;
+        // there must a required prop in input
+        // &:valid,
+        // need to add placeholder
+        &:not(:placeholder-shown),
+        &:focus {
+            + label {
+                background-color: #efdace;
+                line-height: 10px;
+                opacity: 1;
+                font-size: 10px;
+                top: 0px;
+            }
+        }
+        &:focus {
+            outline: none;
+            border: 1px solid #0086e4;
+            + label {
+                color: #0086e4;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .InputWrapper{
+      input{
+        width: 150px;
+
+      }
+    }
+}

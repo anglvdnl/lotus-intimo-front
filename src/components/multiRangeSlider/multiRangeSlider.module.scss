@@ -1,0 +1,154 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 250px;
+}
+
+.slider__track,
+.slider__range,
+.sliderLeftValue,
+.sliderRightValue {
+  position: absolute;
+}
+
+.slider__track,
+.slider__range {
+  border-radius: 3px;
+  height: 9px;
+}
+
+.slider__track {
+  background-color: #7f7f7f;
+  width: 100%;
+  z-index: 1;
+}
+
+.slider__range {
+  background-color: #b6827c;
+  z-index: 2;
+}
+
+.sliderLeftValue,
+.sliderRightValue {
+  color: #000;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.sliderLeftValue {
+  left: 20px;
+}
+
+.sliderRightValue {
+  right: 20px;
+}
+
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  width: 250px;
+  outline: none;
+}
+
+.thumbZindex3 {
+  z-index: 3;
+}
+
+.thumbZindex4 {
+  z-index: 4;
+}
+
+.thumbZindex5 {
+  z-index: 5;
+}
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+  background-color: #f1f5f7;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #ced4da;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin-top: 0px;
+  pointer-events: all;
+  position: relative;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+  background-color: #f1f5f7;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #ced4da;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin-top: 0px;
+  pointer-events: all;
+  position: relative;
+}
+
+@media screen and (max-width: 1100px) {
+  .slider {
+    width: 200px;
+  }
+
+  .thumb {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .slider {
+    width: 120px;
+  }
+
+  .thumb {
+    width: 120px;
+  }
+
+  .thumb::-webkit-slider-thumb {
+    background-color: #f1f5f7;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #ced4da;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin-top: 0px;
+    pointer-events: all;
+    position: relative;
+  }
+
+  /* For Firefox browsers */
+  .thumb::-moz-range-thumb {
+    background-color: #f1f5f7;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px #ced4da;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin-top: 0px;
+    pointer-events: all;
+    position: relative;
+  }
+}

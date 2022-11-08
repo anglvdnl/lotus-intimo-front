@@ -1,0 +1,308 @@
+.Aside {
+    width: 25%;
+    margin: 60px 0;
+
+    .Wrapper {
+        padding: 25px 0;
+        margin: 0 auto;
+        width: 90%;
+        box-shadow: 0px 5px 35px -20px rgba(117, 13, 55, 0.6);
+
+        .Categories {
+            .Category {
+                cursor: pointer;
+                transition: all 0.5s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #b6827c;
+                color: #f7edf0;
+                margin: 10px 20px;
+
+                h2 {
+                    font-size: 20px;
+                }
+                svg {
+                    margin-left: 10px;
+                }
+            }
+
+            .CategoryActive {
+                transition: all 0.5s;
+                svg {
+                    transform: rotate(-90deg);
+                }
+            }
+
+            .Items {
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 10px 20px;
+
+                    li {
+                        color: #000;
+                        cursor: pointer;
+                        font-size: 17px;
+                        position: relative;
+                        margin-bottom: 10px;
+                        font-weight: 700;
+
+                        &.active {
+                            color: #750d37;
+                        }
+                    }
+
+                    .Disabled {
+                        cursor: default;
+                        color: #949494;
+                    }
+                }
+            }
+        }
+
+        .Filters {
+            display: flex;
+            flex-flow: column;
+
+            .Price {
+                padding: 5px 20px;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                div {
+                    padding: 0;
+                }
+            }
+
+            .FiltersDiv {
+                padding: 5px 20px;
+                p {
+                    font-size: 24px;
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+
+                    li {
+                        label {
+                            display: block;
+                            position: relative;
+                            padding-left: 35px;
+                            margin-bottom: 12px;
+                            cursor: pointer;
+                            font-size: 22px;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+
+                            div {
+                                display: flex;
+                                align-items: center;
+                                .Square {
+                                    width: 16px;
+                                    height: 16px;
+                                    margin-right: 5px;
+                                    border-radius: 3px;
+                                    border: 1px solid rgb(216, 216, 216);
+                                }
+                            }
+
+                            input {
+                                position: absolute;
+                                opacity: 0;
+                                cursor: pointer;
+                                height: 0;
+                                width: 0;
+                            }
+
+                            .Checkbox {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                height: 25px;
+                                width: 25px;
+                                border: 1px solid rgba(164, 164, 164, 0.933);
+                                border-radius: 2px;
+                                transition: all 0.1s;
+
+                                &::after {
+                                    display: none;
+                                    content: "";
+                                    position: absolute;
+                                    left: 8px;
+                                    top: 4px;
+                                    width: 5px;
+                                    height: 10px;
+                                    border: solid white;
+                                    border-width: 0 3px 3px 0;
+                                    -webkit-transform: rotate(45deg);
+                                    -ms-transform: rotate(45deg);
+                                    transform: rotate(45deg);
+                                }
+                            }
+
+                            &:hover input ~ span {
+                                border: 1px solid black;
+                            }
+
+                            & input:checked ~ span {
+                                background-color: #750d37;
+                            }
+
+                            & input:checked ~ span:after {
+                                display: block;
+                            }
+                        }
+
+                        .Disabled {
+                            cursor: default;
+                            color: #949494;
+
+                            &:hover input ~ span {
+                                border: 1px solid rgba(164, 164, 164, 0.933);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.FiltersToggle {
+    position: fixed;
+    top: 50%;
+    z-index: 11;
+    transition: all 0.4s;
+    font-size: 60px;
+    display: none;
+
+    svg {
+        color: #5a5a5a;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .Aside {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .Aside {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .Aside {
+        position: fixed;
+        z-index: 10;
+        transition: all 0.4s;
+        margin: 0;
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        overflow: auto;
+        max-height: 100%;
+        width: 35%;
+
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            background-color: #f5f5f5;
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            background-color: #f5f5f5;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: rgba(117, 13, 55, 0.6);
+        }
+
+        .Wrapper {
+            background-color: #fff;
+            padding: 25px 0;
+            margin: 0;
+            width: 100%;
+
+            .Categories {
+                .Category {
+                    margin: 10px;
+
+                    h2 {
+                        font-size: 16px;
+                    }
+                    svg {
+                        margin-left: 0;
+                    }
+                }
+
+                .Items {
+                    ul {
+                        li {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .Filters {
+                div {
+                    p {
+                        font-size: 20px;
+                    }
+                    ul {
+                        li {
+                            label {
+                                font-size: 18px;
+
+                                span {
+                                    height: 20px;
+                                    width: 20px;
+
+                                    &::after {
+                                        left: 5px;
+                                        top: 1px;
+                                        height: 9px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .AsideAdapt {
+        transform: translateX(0%);
+    }
+
+    .FiltersToggle {
+        display: block;
+    }
+
+    .FiltersToggleActive {
+        margin-left: 33%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .Aside {
+        width: 50%;
+    }
+
+    .FiltersToggleActive {
+        margin-left: 48%;
+    }
+}
